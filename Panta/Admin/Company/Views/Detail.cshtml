@@ -1,0 +1,49 @@
+﻿
+@model Panta.Admin.Company.ViewModels.CompanyViewModel
+
+@using (Html.BeginForm())
+{
+<div class="col-md-6 col-md-offset-3">
+    <div class="panel panel-default">
+        <div class="panel-heading">Create Company</div>
+        <div class="panel-body"></div>
+        <div class="list-group">
+            <div class="input-group col-sm-offset-2">
+                <span class="input-group-addon" id="basic-addon1">Name</span>
+                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control", @placeholder = "Username" } })
+            </div>
+            <div class="input-group col-sm-offset-2">
+                <span class="input-group-addon" id="basic-addon1">CVR</span>
+                @Html.EditorFor(model => model.CVR, new { htmlAttributes = new { @class = "form-control", @placeholder = "CVR number" } })
+            </div>
+            <div class="input-group col-sm-offset-2">
+                <span class="input-group-addon" id="basic-addon1">VAT</span>
+                @Html.EditorFor(model => model.VATNumber, new { htmlAttributes = new { @class = "form-control", @placeholder = "VAT number" } })
+            </div>
+            <div class="input-group col-sm-offset-2">
+                <span class="input-group-addon" id="basic-addon1">Address</span>
+                @Html.EditorFor(model => model.Adress, new { htmlAttributes = new { @class = "form-control", @placeholder = "Address" } })
+            </div>
+            <div class="input-group col-sm-offset-2">
+                <span class="input-group-addon" id="basic-addon1">Zip</span>
+                @Html.EditorFor(model => model.ZipCode, new { htmlAttributes = new { @class = "form-control", @placeholder = "Zip Code" } })
+            </div>
+            <div class="input-group col-sm-offset-2">
+                <span class="input-group-addon" id="basic-addon1">Town</span>
+                @Html.EditorFor(model => model.Town, new { htmlAttributes = new { @class = "form-control", @placeholder = "Town" } })
+            </div>
+            <div class="input-group col-sm-offset-2">
+                <span class="input-group-addon" id="basic-addon1">Phone</span>
+                @Html.EditorFor(model => model.PhoneNumber, new { htmlAttributes = new { @class = "form-control", @placeholder = "Phone number" } })
+            </div>
+            <div class="input-group col-sm-offset-2 ">
+                <span class="input-group-addon" id="basic-addon1">Website</span>
+                @Html.EditorFor(model => model.Website, new { htmlAttributes = new { @class = "form-control", @placeholder = "Website" } })
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-md-6 col-md-offset-3">
+    <button type="submit" class="btn btn-success pull-right">Save</button>
+</div>
+}

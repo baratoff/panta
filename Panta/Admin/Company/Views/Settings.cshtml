@@ -1,0 +1,75 @@
+﻿@model Panta.Admin.Company.ViewModels.SettingViewModel
+
+@Styles.Render("~/Assets/Content/Switch.css")
+
+@using (Html.BeginForm())
+{
+<div class="col-md-6 col-md-offset-3">
+    <div class="panel panel-default">
+        <div class="panel-heading">Company Settings</div>
+        <div class="list-group">
+            <div class="list-group-item">
+                @Html.LabelFor(model => model.FollowStandartHolyDayClosingTime)
+                <label class="switch pull-right">
+                    @Html.CheckBoxFor(model => model.FollowStandartHolyDayClosingTime)
+                    <span class="slider round"></span>
+                </label>
+            </div>
+            <div class="list-group-item">
+                @Html.LabelFor(model => model.RequireBookingConfirmationFromCompany)
+                <label class="switch pull-right">
+                    @Html.CheckBoxFor(model => model.RequireBookingConfirmationFromCompany, new { @class = "test" })
+                    <span class="slider round"></span>
+                </label>
+            </div>
+            <div class="list-group-item">
+                @Html.LabelFor(model => model.ReciveEmailOnBooking)
+                <label class="switch pull-right">
+                    @Html.CheckBoxFor(model => model.ReciveEmailOnBooking)
+                    <span class="slider round"></span>
+                </label>
+            </div>
+            <div class="list-group-item">
+                @Html.LabelFor(model => model.BePubliclyExsposed)
+                <label class="switch pull-right">
+                    @Html.CheckBoxFor(model => model.BePubliclyExsposed)
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="col-md-6 col-md-offset-3">
+    <div class="panel panel-default">
+        <div class="panel-heading">Customer Settings</div>
+        <div class="list-group">
+            <div class="list-group-item">
+                @Html.LabelFor(model => model.RequireCustomerPhoneNumberValidation)
+                <label class="switch pull-right">
+                    @Html.CheckBoxFor(model => model.RequireCustomerPhoneNumberValidation)
+                    <span class="slider round"></span>
+                </label>
+            </div>
+            <div class="list-group-item">
+                @Html.LabelFor(model => model.SendSMSReminderToCustomer)
+                <label class="switch pull-right">
+                    @Html.CheckBoxFor(model => model.SendEmailReminderToCustomer)
+                    <span class="slider round"></span>
+                </label>
+            </div>
+            <div class="list-group-item">
+                @Html.LabelFor(model => model.SendEmailReminderToCustomer)
+                <label class="switch pull-right">
+                    @Html.CheckBoxFor(model => model.SendEmailReminderToCustomer)
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-md-6 col-md-offset-3">
+    <button type="submit" class="btn btn-success pull-right">Save</button>
+</div>
+}
