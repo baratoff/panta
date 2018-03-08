@@ -30,6 +30,7 @@ namespace Panta
             bundles.Add(new StyleBundle("~/assets/Content/css").Include(
                       "~/assets/css/bootstrap.min.css",
                       "~/assets/css/animate.min.css",
+                      "~/assets/css/themify-icons.css",
                       "~/assets/css/paper-dashboard.css"));
 
 

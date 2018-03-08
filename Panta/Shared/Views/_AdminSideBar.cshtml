@@ -11,9 +11,15 @@
         </div>
         <ul class="nav">
             <li class="active">
-                <a href="dashboard.html">
+                <a href="@Url.Action("Index", "Index")">
                     <i class="ti-panel"></i>
                     <p>Dashboard</p>
+                </a>
+            </li>
+            <li>
+                <a href="@Url.Action("Index","Booking")">
+                    <i class="ti-agenda"></i>
+                    <p>Bookings</p>
                 </a>
             </li>
             <li>
@@ -29,21 +35,9 @@
                 </a>
             </li>
             <li>
-                <a href="maps.html">
-                    <i class="ti-map"></i>
-                    <p>Locations</p>
-                </a>
-            </li>
-            <li>
                 <a href="notifications.html">
                     <i class="ti-bell"></i>
                     <p>Notifications</p>
-                </a>
-            </li>
-            <li class="active-pro">
-                <a href="upgrade.html">
-                    <i class="ti-export"></i>
-                    <p>Upgrade to Deluxe</p>
                 </a>
             </li>
         </ul>

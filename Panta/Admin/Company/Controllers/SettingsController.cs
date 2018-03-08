@@ -17,6 +17,7 @@ namespace Panta.Admin.Company.Controllers
         // GET: Settings
         public ActionResult Settings()
         {
+            ViewBag.Title = "Settings"; 
             Guid companyId = Guid.Parse("62A4EC58-6121-4FFA-AB30-39956CF7F6EB"); //User.Identity.GetCompanyId();
             SettingsDB Dal = new SettingsDB();
             Settings model = Dal.GetSettingsByCompanyId(companyId);
@@ -27,6 +28,7 @@ namespace Panta.Admin.Company.Controllers
         [HttpPost]
         public ActionResult Settings(SettingViewModel viewModel)
         {
+            ViewBag.Title = "Settings";
             Settings model = AutoMapper.Mapper.Map<SettingViewModel, Settings>(viewModel);
 
             SettingsDB Dal = new SettingsDB();
